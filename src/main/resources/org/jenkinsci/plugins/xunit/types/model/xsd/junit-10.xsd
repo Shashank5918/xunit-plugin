@@ -22,10 +22,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
+
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:simpleType name="SUREFIRE_TIME">
         <xs:restriction base="xs:string">
-            <xs:pattern value="(([0-9]{0,3},)*[0-9]{3}|[0-9]{0,3})*(\.[0-9]{0,3})?"/>
+            <xs:pattern value="(([0-9]{0,3},)*[0-9]{3}|[0-9]{0,3})*(\.[0-9]{0,9})?"/><!--Update decimal range in order to fix issue with Junit test reporting -->
         </xs:restriction>
     </xs:simpleType>
 
